@@ -11,9 +11,21 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class FanoutProvider {
   data: any;
+  client: any;
+  clientUrl: string;
 
   constructor(private http: Http) {
     this.data = null;
+    this.clientUrl = 'your-fanout-url-here';
+  }
+
+  init(callback:any) {
+      this.client = new Faye.Client(this.clientUrl);
+      this.client.subscribe('/test', function (data) {
+          //alert('got data: ' + data);
+          callback(data);
+          console.log('got data: ' + data);
+      });
   }
 
   load() {
