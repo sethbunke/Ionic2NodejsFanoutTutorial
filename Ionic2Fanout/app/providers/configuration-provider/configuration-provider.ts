@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class ConfigurationProvider {  
-  public fanoutUrl:string;
+  public fanoutUrl: string;
   constructor() {
     this.fanoutUrl = 'your-fanout-url-here';
   }  
