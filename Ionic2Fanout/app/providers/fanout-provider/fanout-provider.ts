@@ -17,11 +17,12 @@ export class FanoutProvider {
   constructor(private http: Http) {
     this.data = null;
     this.clientUrl = 'your-fanout-url-here';
+    this.client = new Faye.Client(this.clientUrl);
   }
 
-  init(callback:any) {
-      this.client = new Faye.Client(this.clientUrl);
-      this.client.subscribe('/test', function (data) {
+  subscribe(callback:any, channelName:string) {
+      
+      this.client.subscribe('/' + channelName, function (data) {
           //alert('got data: ' + data);
           callback(data);
           console.log('got data: ' + data);
