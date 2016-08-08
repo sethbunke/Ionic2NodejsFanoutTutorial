@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class ConfigurationProvider {  
   public fanoutUrl: string;
   constructor() {
-    this.fanoutUrl = 'your-fanout-url-here';
+    this.fanoutUrl = 'http://ab578c16.fanoutcdn.com/bayeux';
   }  
 }
 
