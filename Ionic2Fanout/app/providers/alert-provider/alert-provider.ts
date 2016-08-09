@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import {NavController,Alert} from 'ionic-angular';
 
 @Injectable()
-export class AlertProvider {
-  
+export class AlertProvider {  
   constructor() {}  
   
   presentDismissAlert(title: string, subtitle: string, navCtrl: NavController) {    
@@ -14,6 +13,5 @@ export class AlertProvider {
     });
     navCtrl.present(alert);  
   }  
-
 }
 

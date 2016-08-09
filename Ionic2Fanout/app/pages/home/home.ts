@@ -16,17 +16,7 @@ export class HomePage implements OnInit {
     this.fanoutProvider.subscribe((data) => {
       console.log('received data in home page');
       console.log(data);
-      this.alertPovider.presentDismissAlert('Fanout', data, this.navCtrl);
-      //this.presentAlert('Fanout', data)      
+      this.alertPovider.presentDismissAlert('Fanout', data, this.navCtrl);       
     }, 'test');
-  }  
-
-  // presentAlert(title:string, subtitle:string) {
-  //   let alert = Alert.create({
-  //     title: title,
-  //     subTitle: subtitle,
-  //     buttons: ['Dismiss']
-  //   });
-  //   this.navCtrl.present(alert);
-  // }
+  }    
 }
