@@ -3,14 +3,14 @@ import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {ConfigurationProvider} from './providers/configuration-provider/configuration-provider';
-
+import {AlertProvider} from './providers/alert-provider/alert-provider';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
-  providers: [ConfigurationProvider]
+  providers: [ConfigurationProvider,AlertProvider]
 })
 export class MyApp {
-  rootPage: any = HomePage;
+  rootPage: any = HomePage;  
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
