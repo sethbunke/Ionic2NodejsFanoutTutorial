@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController,Alert} from 'ionic-angular';
 import {FanoutProvider} from '../../providers/fanout-provider/fanout-provider';
 
 @Component({
@@ -11,10 +11,20 @@ export class HomePage implements OnInit {
 
   }
 
+  presentAlert(title:string, subtitle:string) {
+    let alert = Alert.create({
+      title: title,
+      subTitle: subtitle,
+      buttons: ['Dismiss']
+    });
+    this.navCtrl.present(alert);
+  }
+
   ngOnInit() {
     this.fanoutProvider.subscribe((data) => {
       console.log('received data in home page');
       console.log(data);
+      this.presentAlert('Fanout', data)
       //this.presentAlert('Fanout', data);
     }, 'test');
   }  
