@@ -18,7 +18,7 @@ export class FanoutProvider {
   subscribe(callback:any, channelName:string) {      
       this.client.subscribe('/' + channelName, function (data) {          
           callback(data);
-          console.log('got data: ' + data);
+          console.log('received data: ' + data);
       });
   }  
 }
