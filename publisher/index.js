@@ -20,3 +20,5 @@ let callback = (success, message, context) => {
 
 let publisher = new fanout.Fanout(realmId, realmKey);
 publisher.publish('test', 'Test publish!', callback);
+
+console.log('Publisher started');
