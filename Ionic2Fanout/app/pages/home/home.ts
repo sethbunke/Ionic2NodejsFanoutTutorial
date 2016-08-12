@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NavController,Alert} from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 import {FanoutProvider} from '../../providers/fanout-provider/fanout-provider';
 import {AlertProvider} from '../../providers/alert-provider/alert-provider';
 
