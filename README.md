@@ -1,1 +1,1 @@
-"# Ionic2NodejsFanoutTutorial" 
+# Ionic2 Nodejs Fanout Tutorial [Fanout](https://fanout.io/) is a great service that allows you to quickly and easily send messages to client applications. See the [tutorial on Pluralsight](http://tutorials.pluralsight.com/front-end-javascript/use-fanout-to-send-messages-to-your-ionic2-app-in-about-20-minutes) for full, step-by-step details on how easy it is to use [Nodejs](https://nodejs.org), [Ioinic2](http://ionic.io/2), and [Fanout](https://fanout.io/) out to publish messages to a hybrid mobile application. 
